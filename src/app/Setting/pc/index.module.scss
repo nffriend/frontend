@@ -1,0 +1,112 @@
+.root{
+    position: relative;
+    min-height: 100%;
+    background-color: #f6f8fb;
+    padding: .32rem .16rem;
+    box-sizing: border-box;
+    &.hide{
+        &>div{
+            opacity: 0;
+        }
+    }
+    &>div{
+        background-color: #fff;
+        border-radius: .2rem;
+        min-height: calc(100vh - .64rem);
+        box-sizing: border-box;
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        transition: opacity 200ms;
+    }
+
+    .title{
+        font-size: .26rem;
+        font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+        font-weight: bold;
+        text-align: left;
+        color: #333333;
+        padding: .24rem;
+    }
+
+    .body{
+        box-sizing: border-box;
+        padding: 0 .24rem;
+        .line{
+            border: .01rem solid #dbe1f0;
+            width: 100%;
+            margin:.1rem 0;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            padding: .2rem 0;
+            &.cursor{
+                cursor: pointer;
+                &:hover{
+                    .t{
+                        color: #000;
+                    }
+                    
+                }
+            }
+            &.flexTop{
+                align-items: flex-start;
+            }
+            .icon{
+                height: .2rem;
+                flex:none;
+            }
+            .t{
+                font-size: .16rem;
+                font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+                font-weight: 500;
+                color: #7a7e8d;
+                flex:none;
+                margin-left: .15rem;
+                min-width: 1.3rem;
+            }
+            .auto{
+                flex:auto;
+                max-width: 3.3rem;
+            }
+            .info{
+                display: flex;
+                font-size: .16rem;
+                font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+                font-weight: 500;
+                color: #333333;
+                flex: none;
+                &.column{
+                    flex-direction: column;
+                }
+                img{
+                    height: .2rem;
+                    margin-left: .1rem;
+                    cursor: pointer;
+                }
+                a{
+                    color: #5F58F1;
+                }
+                .links{
+                    padding-top: .24rem;
+                    a{
+                        transition: opacity 200ms;
+                        opacity: .5;
+                        img{
+                            width: .2rem;
+                            margin: 0;
+                        }
+                        &+a{
+                            margin-left: .4rem;
+                        }
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

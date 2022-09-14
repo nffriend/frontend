@@ -1,0 +1,30 @@
+.root{
+    position: relative;
+    box-sizing: border-box;
+    margin: .32rem .16rem;
+    background-color: #fff;
+    min-height: calc(100vh - .64rem);
+    border-radius: .2rem;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    font-size: .2rem;
+    font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    color: #333333;
+    padding: .3rem;
+    .back{
+        cursor: pointer;
+    }
+    .title{
+        font-size: .26rem;
+        margin-left: .12rem;
+    }
+}
+
+.tabpane{
+    padding: 0 !important;
+}

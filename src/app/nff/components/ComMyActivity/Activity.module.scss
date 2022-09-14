@@ -1,0 +1,120 @@
+.root{
+    position: relative;
+    display: flex;
+}
+
+.menu{
+    flex:none;
+    &>div{
+        display: flex;
+        align-items: center;
+        height: .16rem;
+        &+div{
+            margin-top: .16rem;
+        }
+        span{
+            flex:none;
+            width: .6rem;
+            font-size: .16rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: bold;
+            color: #333333;
+        }
+        .passBox{
+            width: .64rem;
+            height: .16rem;
+            border-radius: .04rem;
+            overflow: hidden;
+            position: relative;
+            &.p1{
+                background-color: #d7d5ff;
+                &>div{
+                    background-color: #736DFC;
+                    height: 100%;
+                }
+            }
+            &.p2{
+                background-color: #D2F6FF;
+                &>div{
+                    background-color: #7CE2FD;
+                    height: 100%;
+                }
+            }
+            &.p3{
+                background-color: #D6FFEF;
+                &>div{
+                    background-color: #4EDFB3;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.dateBox{
+    position: relative;
+    flex:auto;
+
+    width: 1px;
+    margin-left: .2rem;
+    .scrollBar{
+        height: 5px;
+        background-image: linear-gradient(to bottom, rgba(255,255,255, 0) 0%, rgba(255,255,255, 0) 50%, #b9bed2 50%, rgba(255,255,255, 0) 51%);
+        &>div{
+            background-color: #7c81fd;
+        }
+    }
+    .yearBox{
+        .monthBox{
+            display: flex;
+            .oneMonth{
+                padding: 0 .07rem;
+                border-left: 1px dashed #dcdfe5;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &.first{
+                    border-color: #a4a9b4;
+                }
+                .m{
+                    width: .16rem;
+                    height: .16rem;
+                    border-radius: .02rem;
+                    display: block;
+                    background-color: #dcdfe5;
+                    &+.m{
+                        margin-top: .16rem;
+                    }
+                    &.h1{
+                        background-color: #736DFC;
+                    }
+                    &.h2{
+                        background-color:#7CE2FD;
+                    }
+                    &.h3{
+                        background-color: #4EDFB3;
+                    }
+                }
+                .mStr{
+                    font-size: .12rem;
+                    font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+                    font-weight: 500;
+                    color: #626571;
+                    margin-top: .16rem;
+                    user-select: none;
+                }
+            }
+        }
+        .theYear{
+            font-size: .14rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: bold;
+            color: #333333;
+            margin-top: .1rem;
+            padding-bottom: .1rem;
+        }
+    }
+    .slide{
+        width: auto;
+    }
+}

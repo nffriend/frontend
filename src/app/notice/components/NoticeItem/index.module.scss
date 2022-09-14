@@ -1,0 +1,50 @@
+.root{
+    position: relative;
+    border-bottom: 1px solid rgba(229,235,250,0.70);
+    padding: .3rem 0 .27rem;
+    display: flex;
+    flex-direction: column;
+    gap: .08rem;
+    &:first-child{
+        padding-top: 0;
+    }
+    .left{
+        font-size: .16rem;
+        font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+        font-weight: 400;
+        color: #7a7e8d;
+    }
+    .goDetail{
+        text-decoration: underline;
+        font-size: 16px;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: 600;
+        color: #1e87fa;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        .head{
+            width: .32rem;
+            height: .32rem;
+            border-radius: .32rem;
+        }
+        .name{
+            margin-left: .08rem;
+            font-size:.18rem;
+            font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+            font-weight: 500;
+            color: #333333;
+        }
+        .date{
+            margin-left: .33rem;
+            font-size: .16rem;
+            font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+            font-weight: 400;
+            color: #9499aa;
+        }
+    }
+    .info{
+     
+    }
+}

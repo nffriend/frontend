@@ -1,0 +1,42 @@
+.root{
+    position: relative;
+    height: .48rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: .2rem;
+    border-radius: .08rem;
+    grid-area: search;
+    .searchBtn{
+        width: .48rem;
+        height: .48rem;
+        text-align: center;
+        line-height: .48rem;
+        cursor: pointer;
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+        img{
+            width: .22rem;
+            opacity: .3;
+            transition: opacity 200ms;
+        }
+    }
+    input{
+        font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+        flex:auto;
+        height: 100%;
+        color: #121212;
+        font-size: .16rem;
+        border:none;
+        outline: none;
+        letter-spacing: 1px;
+        &::placeholder{
+            font-size: .14rem;
+            font-weight: 400;
+            color: #b2b5ba;
+        }
+    }
+}

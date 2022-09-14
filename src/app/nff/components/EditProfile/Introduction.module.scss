@@ -1,0 +1,28 @@
+.root{
+    height: 1.34rem;
+    border: 1px solid #dbe1f0;
+    border-radius: .08rem;
+    padding: .16rem;
+    .title{
+        font-size: .16rem;
+        font-weight: 400;
+        color: #7a7e8d;
+        display: flex;
+        justify-content: space-between;
+        .error{
+            color: #c22;
+        }
+    }
+    textarea{
+        display: block;
+        width: 100%;
+        outline: none;
+        resize:none;
+        height: .8rem;
+        font-size: .16rem;
+        font-weight: 400;
+        color: #333333;
+        line-height: .22rem;
+        border:none;
+    }
+}

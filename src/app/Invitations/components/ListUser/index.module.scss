@@ -1,0 +1,36 @@
+.root{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: .26rem;
+    .col1{
+        width: 40%;
+        flex:none;
+        display: flex;
+        align-items: center;
+        .photo{
+            width: .32rem;
+            height: .32rem;
+            overflow: hidden;
+            border-radius: .32rem;
+        }
+        .username{
+            margin-left: .12rem;
+            font-size: .16rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: normal;
+            color: #333333;
+        }
+    }
+    .col2{
+        flex:auto;
+        font-size: .16rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: normal;
+        color: #333333;
+    }
+    .col3{
+        width: 20%;
+        flex:none;
+    }
+}

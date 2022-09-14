@@ -1,0 +1,29 @@
+.root{
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+    margin-bottom: .28rem;
+    max-width: 6.65rem;
+    .photo{
+        width: .48rem;
+        height: .48rem;
+        border-radius: .48rem;
+        object-fit: cover;
+        flex:none;
+    }
+    .name{
+        font-size: .18rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: bold;
+        color: #333333;
+    }
+    .date{
+        font-size: .14rem;
+        font-family: HindMadurai, HindMadurai-Regular,sans-serif;
+        font-weight: 400;
+        color: #7a7e8d;
+    }
+    .auto{
+        flex: auto;
+    }
+} 

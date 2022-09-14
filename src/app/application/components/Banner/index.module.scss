@@ -1,0 +1,22 @@
+.root{
+    position: relative;
+    overflow: hidden;
+    border-radius: .2rem;
+    grid-area: banner;
+}
+.swiper{
+    width: 100%;
+}
+.slide{
+    width: auto;
+}
+.pic{
+    width: 100%;
+    height: 2.4rem;
+    object-fit: cover;
+
+}
+.pagination{
+    --swiper-theme-color: #ff6600;
+    --swiper-pagination-color: #00ff33;
+}

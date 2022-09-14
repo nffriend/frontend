@@ -1,0 +1,63 @@
+.root{
+    margin-bottom: .1rem;
+    display: flex;
+    .photo{
+        width: .32rem;
+        height: .32rem;
+        border-radius: .32rem;
+        flex:none;
+
+        
+    }
+ .tip{
+    box-sizing: border-box;
+    margin-left: .1rem;
+    flex:auto;
+    transform: translateY(.05rem);
+    max-width: calc(100% - 0.33rem);
+    .user{
+        font-size: .16rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: bold;
+        color: #333333;
+    }
+    .msg{
+        margin-top: .06rem;
+        pre{
+            font-size: .16rem;
+            font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+            font-weight: 400;
+            color: #333333;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    }
+    .time{
+        font-size: .14rem;
+        font-weight: 400;
+        color: #7a7e8d;
+        margin-left: .06rem;
+    }
+    
+ }   
+ .delBtn{
+    min-width: .52rem;
+    height: .2rem;
+    background: #eff0f2;
+    border-radius: .04rem;
+    color: #7A7E8D;
+    font-size: .12rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: .2rem;
+    padding: 0 .1rem;
+    flex:none;
+    cursor: pointer;
+    transform: translateY(.05rem);
+    &.disabled{
+        pointer-events: none;
+        opacity: .8;
+    }
+ }
+}

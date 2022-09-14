@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "MetalMania";
+  src: url("/static/fonts/MetalMania.ttf");
+}
+
+@font-face {
+  font-family: "Mountains of Christmas";
+  src: url("/static/fonts/MountainsofChristmas-Regular.ttf");
+}
+
+@font-face {
+  font-family: "HindMadurai-Medium";
+  src: url("/static/fonts/HindMadurai-Medium.ttf");
+}
+
+@font-face {
+  font-family: "HindMadurai-SemiBold";
+  src: url("/static/fonts/HindMadurai-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "HindMadurai-Reqular";
+  src: url("/static/fonts/HindMadurai-Regular.ttf");
+}
+
+@import url("./iconfont.css");
+
+html > body {
+  letter-spacing: normal;
+  line-height: normal;
+  font-family: "HindMadurai-Reqular", sans-serif;
+  background-color: #f6f8fb;
+}
+
+.t-mount{
+  font-family: "HindMadurai-SemiBold", sans-serif;
+}
+
+.t-font {
+  font-family: "HindMadurai-Medium", sans-serif;
+  font-weight: normal;
+}
+
+.all_nowarp{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}	
+
+a {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-touch-callout: none;
+  user-select: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* 美化滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  background-color: #cdd7ed;
+  border-radius: 8px;
+
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.btn{
+  position: relative;
+  height: .34rem;
+  background-color: #121212;
+  border: solid 1px #121212;
+  border-radius: .34rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: .16rem;
+  font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-g{
+  position: relative;
+  height: .34rem;
+  background-color: #fff;
+  border: solid 1px #121212;
+  border-radius: .34rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121212;
+  font-size: .16rem;
+  font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms;
+  &:hover{
+    background-color: #121212;
+    color: #fff;
+
+  }
+}
+
+#walletconnect-wrapper{
+  font-size: 14px;
+}
+
+/*模态框设置body overflow:hidden用*/
+.body-overhide{
+  overflow: hidden;
+}
+
+// antd message 样式
+.ant-message-notice-content{
+  background-color: #13191b;
+  color: #fff;
+  box-shadow: 0px 0px 0.2rem 0.05rem rgb(34 212 158 / 40%);
+}
+
+// antd 侧边通知 样式
+.ant-notification-topRight{
+  margin-right: 0;
+  .ant-notification-notice{
+    padding: 0 0 0 .2rem;
+    border-radius: .13rem 0 0 .13rem;
+    background-image: url("/static/imgs/glass.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-color: #13191B;
+    box-shadow: 0 .16rem .32rem rgba(0,0,0,.5);
+    width: 5rem;
+    .ant-notification-notice-with-icon{
+      .ant-notification-notice-message{
+        
+        margin: .2rem 0 .2rem .6rem;
+      }
+    }
+    .ant-notification-notice-icon{
+      top: .17rem;
+      img{
+        width: .32rem;
+        display: inline-block;
+      }
+    }
+    .ant-notification-notice-message{
+      font-size: .16rem;
+      
+      font-family: Poppins-Medium, Poppins,sans-serif;
+      color: #D6E3E7;
+    }
+    .ant-notification-notice-close{
+      color: #4D636B;
+      font-size: .18rem;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  .payment-tip{
+    position: relative;
+    padding: .2rem .3rem;
+    width: 6rem;
+    .ant-notification-notice-message{
+      font-size: .26rem;
+      font-weight: 500;
+      color: #28E2B2;
+
+    }
+  }
+}
+
+// ant进度条样式
+.level-progress{
+  width: 2.93rem;
+
+
+  .ant-progress-inner{
+    background-color: #fff;
+    height: .16rem;
+    border:solid 1px #fff;
+  }
+  .ant-progress-bg{
+    background: linear-gradient(90deg,#7381fc 6%, #f9adfc 100%);
+    height: .16rem !important;
+    transform: translateY(-1px);
+  }
+}
+
+// antd 评分样式
+.app-rate{
+  font-size: .12rem;
+  color: #000;
+  .ant-rate-star:not(:last-child) {
+    margin-right: .05rem;
+  }
+  .ant-rate-star-half .ant-rate-star-first, .ant-rate-star-full .ant-rate-star-second {
+    color: inherit;
+  }
+  .ant-rate-star-first, .ant-rate-star-second{
+    color: #9499AA;
+  }
+}
+
+.no-wrap{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+// 新人引导
+.introjs-tooltipReferenceLayer{
+  font-size: 14px;
+}
+.introjs-tooltipbuttons{
+  .introjs-button{
+    padding: 10px 20px;
+    outline: none !important;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}
+
+// swiper滚动条
+.scroll-bar{
+  .swiper-scrollbar-drag{
+    background: #121212;
+    border-radius: 2px;
+  }
+}
+
+// 菜单选中的样式
+.ant-menu-item-selected{
+  background: #000 !important;
+}
+
+// swiper 分页器样式
+.swiper-pagination-bullets{
+  font-size: .12rem;
+  --swiper-theme-color: #fff;
+  .swiper-pagination-bullet-active{
+    opacity: 1 !important;
+  }
+  .swiper-pagination-bullet{
+    opacity: .3;
+    transform: scale(.8);
+    &+.swiper-pagination-bullet{
+      margin-left: .14rem;
+    }
+  }
+}
+// Tab样式
+.tabsAntd{
+  flex:auto;
+  .ant-tabs-content-holder{
+    display: flex;
+    flex-direction: column;
+    .ant-tabs-content{
+      flex:auto;
+    }
+  }
+  .ant-tabs-nav-list{
+    transform: translateX(.3rem) !important;
+    gap: .24rem;
+  }
+  .ant-tabs-tab{
+    padding: .16rem .04rem;
+    min-width: .9rem;
+    text-align: center;
+  }
+  .ant-tabs-tab-btn{
+    font-size: .18rem;
+    font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+    font-weight: bold;
+    color: #b2b5ba;
+    margin:0 auto;
+  }
+  .ant-tabs-tab-active{
+    .ant-tabs-tab-btn{
+      font-size: .18rem;
+      font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+      font-weight: 700;
+      color: #333333;
+    }
+  }
+  .ant-tabs-ink-bar{
+    background: #121212;
+  }
+  .ant-tabs-tabpane{
+    padding: .4rem .28rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// 模态框中的tab样式
+.tabsAntdWidgets{
+  flex:auto;
+  .ant-tabs-content-holder{
+    display: flex;
+    flex-direction: column;
+    .ant-tabs-content{
+      flex:auto;
+    }
+  }
+  .ant-tabs-nav-list{
+    transform: translateX(.3rem) !important;
+    gap: .24rem;
+  }
+  .ant-tabs-tab{
+    padding: .16rem .04rem;
+    min-width: .9rem;
+    text-align: center;
+  }
+  .ant-tabs-tab-btn{
+    font-size: .18rem;
+    font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+    font-weight: bold;
+    color: #b2b5ba;
+    margin:0 auto;
+  }
+  .ant-tabs-tab-active{
+    .ant-tabs-tab-btn{
+      font-size: .18rem;
+      font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+      font-weight: 700;
+      color: #333333;
+    }
+  }
+  .ant-tabs-ink-bar{
+    background: #121212;
+  }
+  .ant-tabs-tabpane{
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Badge位置调整
+.ant-badge{
+  .ant-badge-dot{
+    top: .04rem;
+    right: .04rem;
+    width: .06rem;
+    height: .06rem;
+    box-shadow: none;
+  }
+}
+
+// 分页器
+.pagin{
+  .ant-pagination-item-active{
+    border-color: #000;
+    a{
+      color: #000;
+    }
+  }
+}
+
+.modal-self{
+  width: 100vw !important;
+}
+
+@media screen and (max-width: 750px) {
+  .ant-notification-topRight{
+    .ant-notification-notice{
+      .ant-notification-notice-close{
+        font-size: .24rem;
+  
+      }
+    }
+    
+  }
+}

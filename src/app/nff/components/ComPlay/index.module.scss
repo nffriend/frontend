@@ -1,0 +1,52 @@
+.root{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: .24rem;
+}
+
+.picBox{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    .pic{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.btn{
+    width: 1.72rem;
+    height: .5rem;
+    line-height: .5rem;
+    border-radius: .25rem;
+    box-shadow: 0 .05rem .13rem 0 rgba(0,0,0,0.50); 
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    text-align: center;
+
+    font-size: .2rem;
+    font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+    background: linear-gradient(180deg,#292929, #121212);
+
+    &:active{
+        transform: translate(-50%, 2px);
+    }
+}

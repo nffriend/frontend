@@ -1,0 +1,270 @@
+.root{
+    position: relative;
+    width: 8.8rem;
+    background: #f6f8fb;
+    border-radius: .16rem;
+    margin: 0 auto;
+    min-height: 6.8rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    .control{
+        height: .88rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        padding: 0 .32rem;
+        .close{
+            font-size: .26rem;
+            color: #333;
+            flex:none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            flex: auto;
+        }
+        .submit{
+            flex:none;
+            width: .94rem;
+            height: .34rem;
+            border-radius: .34rem;
+        }
+    }
+
+    .tabBody{
+        box-sizing: border-box;
+        padding: .2rem .31rem;
+        
+    }
+
+    .footer{
+        padding: .5rem 0;
+        text-align: center;
+        color: #9499AA;
+        font-size: .16rem;
+        span{
+            cursor: pointer;
+            color:dodgerblue;
+            text-decoration: underline;
+        }
+    }
+
+    .comList{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .32rem;
+    }
+    .comBox{
+        position: relative;
+        height: 3.92rem;
+        overflow: hidden;
+        border-radius: .2rem;
+        cursor: pointer;
+
+        &.col1{
+            width: 3.92rem;
+        }
+        &.col2{
+            width: 100%;
+        }
+        &.col3{
+            width: 100%;
+        }
+
+        .comView{
+            display: block;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .radio{
+            position: absolute;
+            top: .2rem;
+            right: .2rem;
+            z-index: 9;
+            width: .28rem;
+            height: .28rem;
+
+            &.chosed{
+                img{
+                    &.nocheck{
+                        opacity: 0;
+                    }
+                    &.check{
+                        opacity: 1;
+                    }
+                }
+            }
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                &.nocheck{
+                    opacity: 1;
+                }
+                &.check{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .formLayout{
+        &+.formLayout{
+            margin-top: .3rem;
+        }
+        .label{
+            font-size: .18rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            color: #333333;
+            margin-bottom: .1rem;
+            font-weight: 500;
+            sup{
+                color: red;
+            }
+        }
+        .input{
+            display: block;
+            height: .48rem;
+            border: solid .01rem #dbe1f0;
+            border-radius: .08rem;
+            font-size: .16rem;
+            outline: none;
+            color: #222;
+            padding: .12rem;
+            width: 100%;
+            box-sizing: border-box;
+            &::placeholder{
+                color:#B2B5BA;
+            }
+        }
+    }
+
+    .area{
+        display: grid;
+        grid-template-areas:
+        "small medium"
+        "large large";
+        grid-template-columns: 3.1rem auto;
+        grid-template-rows: 3.1rem 3.1rem;
+        grid-gap: .32rem;
+        &>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: normal;
+            background: #fff;
+            cursor: pointer;
+            color: #9499AA;
+            border-radius: .2rem;
+            transition: color 200ms, background-color 200ms;
+            &.chosed{
+                color: #fff;
+                background-color: #000;
+            }
+            &.large{
+                grid-area: large;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 100%;
+        min-height: 0;
+        :global(.ant-tabs-nav){
+            :global(.ant-tabs-tab){
+                padding: .1rem 0;
+                min-width: .45rem;
+                :global(.ant-tabs-tab-btn){
+                    font-size: .12rem;
+                }
+            }
+        }
+
+        .control{
+            height: .5rem;
+            gap: .1rem;
+            padding: 0 .16rem;
+            .close{
+                font-size: .16rem;
+            }
+            .title{
+                font-size: .16rem;
+                font-weight: 500;
+            }
+            .submit{
+                flex:none;
+                width: .54rem;
+                height: .24rem;
+                border-radius: .14rem;
+                font-size: .12rem;
+            }
+        }
+    
+        .tabBody{
+            box-sizing: border-box;
+            padding: .1rem .14rem;
+        }
+    
+        .footer{
+            padding: .2rem 0;
+            font-size: .14rem;
+        }
+    
+        .comList{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .16rem;
+        }
+        .comBox{
+            position: relative;
+            height: 2rem;
+            overflow: hidden;
+            border-radius: .2rem;
+            cursor: pointer;
+    
+            &.col1{
+                width: 100%;
+            }
+        }
+    
+        .formLayout{
+            &+.formLayout{
+                margin-top: .15rem;
+            }
+            .label{
+                font-size: .12rem;
+                margin-bottom: .1rem;
+            }
+            .input{
+                height: .4rem;
+                font-size: .14rem;
+            }
+        }
+    
+        .area{
+            grid-template-columns: 35% auto;
+            grid-template-rows: 1.2rem 1.2rem;
+            grid-gap: .12rem;
+            &>div{
+                font-size: .16rem;
+                border-radius: .14rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.root {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+.shadow {
+    z-index: 1000;
+    pointer-events: none;
+};
+.body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+};
+.iframeBox {
+    position: relative;
+    overflow: hidden;
+    border-radius: .12rem;
+    border: solid .04rem rgba(235,235,235,1);
+    background-color: #222;
+    z-index: 2;
+    width: 7rem;
+    height: 4rem;
+};
+.fullScreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    border: none;
+    border-radius: 0;
+};
+.control {
+    position: absolute;
+    top: 0;
+    right: -.3rem;
+    width: .4rem;
+    border-radius: 0 .12rem .12rem 0;
+    background-color: rgba(255,255,255,.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: .1rem;
+    box-sizing: border-box;
+    z-index: 1;
+    &>img {
+        cursor: pointer;
+        display: block;
+        width: .28rem;
+        height: auto;
+        padding: .05rem;
+    };
+}
+.fullControl {
+    border-radius: .12rem;
+    right: .2rem;
+    top: .2rem;
+    padding-left: 0;
+    z-index: 3;
+};

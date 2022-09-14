@@ -1,0 +1,194 @@
+.root{
+    margin: 0 auto;
+    width: 11rem;
+    height: 7.65rem;
+    background-color: #fff;
+    border-radius: .2rem;
+    display: flex;
+    overflow: hidden;
+    pointer-events: auto;
+
+    .pic{
+        width: 4.4rem;
+        height: 100%;
+        object-fit: cover;
+        background-color: #ccc;
+        flex: none;
+        background-image: url("/static/nff/invcode-back.png");
+        background-size: cover;
+    }
+    .infoBox{
+        box-sizing: border-box;
+        padding: .32rem .5rem;
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section{
+    margin-top: .64rem;
+
+    .title{
+        font-size: .26rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: 600;
+        color: #121212;
+        line-height: .32rem;
+        margin-bottom: .32rem;
+        .account{
+            font-size: .22rem;
+            font-weight: 400;
+            margin: 0 .05rem;
+        }
+        .normal{
+            font-size: .24rem;
+            color: #121212;
+            font-weight: 400;
+            margin: 0 .05rem;
+        }
+        .successIcon{
+            height: .24rem;
+            margin-left: .1rem;
+        }
+    }
+    .tipsBox{
+        background: rgba(236,239,247,0.51);
+        border-radius: .12rem;
+        box-sizing: border-box;
+        padding: .22rem .18rem;
+        font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+        font-weight: 500;
+        color: #7a7e8d;
+        margin-top: .36rem;
+        .t{
+            font-size: .16rem;
+            font-weight: bold;
+        }
+    }
+    .enterBtn{
+        height: .5rem;
+        margin-top: .5rem;
+    }
+}
+
+.auto{
+    flex: auto;
+}
+
+.foot{
+    display: flex;
+    flex: none;
+    justify-content: space-between;
+    .close{
+        font-size: .16rem;
+        font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+        font-weight: 500;
+        color: #9499aa;
+        cursor: pointer;
+        transition: color 200ms;
+        &:hover{
+            color: #000;
+        }
+    }
+    .links{
+        a{
+            transition: opacity 200ms;
+            opacity: .5;
+            img{
+                width: .2rem;
+            }
+            &+a{
+                margin-left: .32rem;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 96%;
+        height: 7.8rem;
+        flex-direction: column;
+        .pic{
+            width: 100%;
+            height: 2rem;
+        }
+        .infoBox{
+            padding: .12rem;
+        }
+    }
+    
+    .section{
+        margin-top: .24rem;
+    
+        .title{
+            font-size: .16rem;
+            line-height: .2rem;
+            margin-bottom: .16rem;
+            .account{
+                font-size: .16rem;
+            }
+            .normal{
+                font-size: .16rem;
+            }
+            .successIcon{
+                height: .14rem;
+            }
+        }
+        .tipsBox{
+            background: rgba(236,239,247,0.51);
+            border-radius: .12rem;
+            box-sizing: border-box;
+            padding: .12rem .12rem;
+            margin-top: .2rem;
+            .t{
+                font-size: .12rem;
+                font-weight: bold;
+            }
+        }
+        .enterBtn{
+            height: .5rem;
+            margin-top: .5rem;
+        }
+    }
+    
+    .auto{
+        flex: auto;
+    }
+    
+    .foot{
+        display: flex;
+        flex: none;
+        justify-content: space-between;
+        .close{
+            font-size: .16rem;
+            font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+            font-weight: 500;
+            color: #9499aa;
+            cursor: pointer;
+            transition: color 200ms;
+            &:hover{
+                color: #000;
+            }
+        }
+        .links{
+            a{
+                transition: opacity 200ms;
+                opacity: .5;
+                img{
+                    width: .2rem;
+                }
+                &+a{
+                    margin-left: .32rem;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

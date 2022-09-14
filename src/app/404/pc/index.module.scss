@@ -1,0 +1,38 @@
+.root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    .pic{
+        width: 5.46rem;
+    }
+    .title{
+        font-size: .4rem;
+        font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+        font-weight: 500;
+        text-align: center;
+        color: #585cfb;
+        margin-top: .3rem;
+    }
+    .info{
+        font-size: .18rem;
+        text-align: center;
+        color: #585cfb;
+        line-height: .32rem;
+        margin-top: .2rem;
+    }
+    .btnBack{
+        width: 2.1rem;
+        height: .48rem;
+        background: #646aff;
+        border-radius: .1rem;
+        font-size: .18rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: .48rem;
+        text-align: center;
+        margin-top: .32rem;
+    }
+}

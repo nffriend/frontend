@@ -1,0 +1,15 @@
+.root{
+    background-color: #fff;
+    border-radius: .2rem;
+    padding: 0 .25rem;
+    grid-area: title;
+    .list{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.slide{
+    width: auto;
+    padding:0 .25rem 0 0;
+}

@@ -1,0 +1,106 @@
+@keyframes ani-dashoffset {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: 100px;
+    }
+}
+
+@keyframes ani-dashoffset2 {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dashoffset: -100px;
+    }
+}
+
+@keyframes ani-pages {
+    0%{
+        transform: translate(-72%, -80%)
+    }
+    100%{
+        transform: translate(-72%, -84%)
+    }
+}
+
+.absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.root{
+    width: 6.2rem;
+    height: 5rem;
+    opacity: 0;
+    transform: translate(-50%, -50%), sacle(1.05,1.05);
+    transition: transform 1000ms, opacity 1000ms;
+    padding-top: 1rem;
+    &.show{
+        transform: translate(-50%, -50%), sacle(1,1);
+        opacity: 1;
+        .friday{
+            transform: translate(20%, -33%);
+        }
+    }
+    img{
+        display: block;
+    }
+    .back{
+       width: 6.2rem;
+    }
+
+    .groupLogos{
+        width: 8.7rem;
+        opacity: 0;
+        transform: translate(-50%, -48%);
+        transition: transform 1s, opacity 1s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), cubic-bezier(0.215, 0.61, 0.355, 1);
+        &.show{
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .friday{
+        width: 2.25rem;
+        transform: translate(20%, -30%);
+        transition: transform 800ms;
+        transition-delay: .500ms;
+        z-index: 2;
+    }
+
+    .pages{
+        width: 3.6rem;
+        transform: translate(-72%, -82%);
+        animation: ani-pages  2.5s ease-in-out 0s infinite alternate both;
+    }
+
+    .createSpace{
+        border-radius: .1rem;
+        width: 2.1rem;
+        height: .48rem;
+        background: linear-gradient(90deg,#787df5, #fb9df9);
+        border: 0;
+        position: absolute;
+        bottom: -1.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: .2rem;
+    }
+}
+
+
+
+.svglines{
+    display: block;
+    width: 9.8rem;
+    transform: translate(-53%, -51.5%);
+}
+.cls{fill:none;stroke:#675cfa;stroke-linecap:round;stroke-linejoin:round;stroke-width:.04rem;stroke-dasharray:0 10;animation: ani-dashoffset 4s linear 0s infinite;}
+.a2{
+    animation: ani-dashoffset2 4s linear 0s infinite;
+}

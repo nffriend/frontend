@@ -1,0 +1,83 @@
+.li{
+    display: flex;
+    padding-left: .32rem;
+    .tip{
+        width: 1px;
+        background-color: #D8D8D8;
+        position: relative;
+        transform: translateY(.06rem);
+        &::before{
+            content: "";
+            width: .06rem;
+            height: .06rem;
+            background-color: #121212;
+            border-radius: .06rem;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.last{
+            background-color: transparent;
+        }
+    }
+    .msg{
+        margin-left: .26rem;
+        padding-bottom: .2rem;
+        
+           .date{
+                font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+                font-weight: 400;
+                color: #7a7e8d;
+            }
+            .lidata{
+                display: flex;
+                align-items: center;
+                color: #7A7E8D;
+                font-size: .15rem;
+                margin-top: .1rem;
+                .type{
+                    box-sizing: border-box;
+                    padding: .02rem .1rem;
+                    font-size: .16rem;
+                    font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+                    font-weight: bold;
+                    border-radius: .04rem;
+                    min-width: .58rem;
+                    text-align: center;
+                    flex:none;
+                    
+                    &.dark{
+                        color: #fff;
+                        background: #121212;
+                        border:solid 1px transparent;
+                    }
+                    &.light{
+                        color: #121212;
+                        background: #fff;
+                        border:solid 1px #121212;
+                    }
+                }
+                .infoWord{
+                    word-break: break-all;
+                    padding-left: .04rem;
+                    span{
+                        font-family: HindMadurai, HindMadurai-Regular, sans-serif;
+                        color: #333333;
+                        margin: 0 .04rem;
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                    }
+                }
+                .head{
+                    width: .22rem;
+                    height: .22rem;
+                    border-radius: .04rem;
+                    margin:0 .08rem;
+                }
+                
+            }
+        
+    }
+}

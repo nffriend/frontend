@@ -1,0 +1,36 @@
+.root{
+    position: relative;
+    display: inline-block;
+    width: 1.16rem;
+    height: .34rem;
+    border: solid 1px #000;
+    border-radius: .34rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: .16rem;
+    flex: none;
+    &.follow{
+        background-color: #000;
+        color: #fff;
+
+    }
+    &.following{
+        background-color: #fff;
+        color: #000;
+        &:hover{
+            color: #E70101;
+            border-color: #E70101;
+        }
+    }
+    &.loading{
+        pointer-events: none;
+    }
+    &.disabled{
+        opacity: .5;
+        pointer-events: none;
+    }
+    
+    
+}

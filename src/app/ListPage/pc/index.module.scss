@@ -1,0 +1,73 @@
+.root{
+    position: relative;
+    min-height: 100%;
+    background-color: #F6F8FB;
+    padding: .32rem .26rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    &>div{
+        background-color: #fff;
+        border-radius: .2rem;
+        min-height: calc(100vh - .64rem);
+        box-sizing: border-box;
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        .title{
+            flex:none;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            box-sizing: border-box;
+            padding: .24rem 0 0 .3rem;
+            .left{
+                width: .2rem;
+                flex:none;
+                cursor: pointer;
+                
+            }
+            .photo{
+                width: .48rem;
+                height: .48rem;
+                border-radius: .48rem;
+                margin: 0 .08rem 0 .16rem;
+                object-fit: cover;
+            }
+            .name{
+                font-size: .26rem;
+                font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+                font-weight: bold;
+                color: #333333;
+            }
+        }
+
+        .tabs{
+            padding-top: .38rem;
+            flex:auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.swiper{
+    flex:auto;
+    width: 100%;
+}
+
+.slide{
+    height: auto;
+}
+.tip{
+    margin:.4rem auto 0 auto;
+
+    width: 2rem;
+    text-align: center;
+    opacity: .5;
+}
+.more{
+    width: 2rem;
+    margin:.4rem auto 0 auto;
+
+}

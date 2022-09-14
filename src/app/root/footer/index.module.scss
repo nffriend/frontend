@@ -1,0 +1,159 @@
+.footer {
+  position: relative;
+  display: flex;
+  background-color: #13191b;
+  overflow: hidden;
+  // border-top: 1px solid rgba(32, 237, 175, 0.5);
+
+  flex-direction: column;
+  align-items: center;
+  padding-top: .73rem;
+
+  background-image: url("/static/heroMint/footer_banner.png");
+  background-size: cover;
+
+  // &.noBorderTop {
+  //   border-top: none;
+  // }
+  .logo {
+    width: 3.08rem;
+  }
+  // .word {
+  //   font-size: 0.22rem;
+  //   font-weight: 400;
+  //   color: #28e2b2;
+  //   margin-top: 0.6rem;
+  //   text-align: center;
+  // }
+  // .search {
+  //   display: flex;
+  //   background-color: #1e282b;
+  //   border-radius: 0.08rem;
+  //   overflow: hidden;
+  //   margin-top: 0.38rem;
+  //   .searchInput {
+  //     padding: 0 0.2rem;
+  //     color: #f7f7f7;
+  //     font-size: 0.24rem;
+  //     width: 3.6rem;
+  //     height: 0.64rem;
+  //     background-color: transparent;
+  //     border: none;
+  //     outline: none;
+  //     letter-spacing: 1px;
+  //     &::placeholder {
+  //       font-size: 0.2rem;
+  //       font-weight: bold;
+  //       color: #516b73;
+  //     }
+  //   }
+  //   .searchBtn {
+  //     width: 1.68rem;
+  //     height: 0.64rem;
+  //     background: linear-gradient(to right, #06b396 0%, #a0f3ba 100%);
+  //     font-size: 0.24rem;
+  //     font-weight: 400;
+  //     color: #13191b;
+  //     text-align: center;
+  //     line-height: 0.64rem;
+  //     cursor: pointer;
+
+  //     span {
+  //       display: inline-block;
+  //       transition: letter-spacing 200ms;
+  //       letter-spacing: 1px;
+  //     }
+  //     &:hover {
+  //       span {
+  //         letter-spacing: 2px;
+  //       }
+  //     }
+  //   }
+  // }
+  .end {
+    font-size: 0.12rem;
+    color: #276455;
+    height: 0.53rem;
+    border-top: 1px solid rgb(72, 160, 134, .25);
+    text-align: center;
+    line-height: 0.53rem;
+    width: 100%;
+    font-family: PingFangSC-Regular, PingFang SC, sans-serif;
+  }
+  .social {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.64rem 0 0.4rem 0;
+    a {
+      position: relative;
+      display: block;
+      width: 0.6rem;
+      height: 0.6rem;
+      padding: 0;
+
+      &:hover {
+        img {
+          transform: translateY(-0.1rem);
+        }
+      }
+      img {
+        transition: transform 300ms;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer {
+    padding-top: 1.14rem;
+
+    &.paddingBottom{
+      padding-bottom: 2rem;
+    }
+    .logo {
+      width: 2.16rem;
+    }
+    .word {
+      font-size: 0.26rem;
+      margin-top: 0.84rem;
+    }
+    .search {
+      border-radius: 0.09rem;
+      margin-top: 0.34rem;
+      .searchInput {
+        padding: 0 0.2rem;
+        font-size: 0.26rem;
+        width: 3.82rem;
+        height: 0.68rem;
+
+        &::placeholder {
+          font-size: 0.26rem;
+        }
+      }
+      .searchBtn {
+        width: 1.78rem;
+        height: 0.68rem;
+        font-size: 0.3rem;
+        font-weight: 400;
+        line-height: 0.68rem;
+      }
+    }
+    .end {
+      font-size: 0.16rem;
+      height: 0.64rem;
+      line-height: 0.64rem;
+    }
+    .social {
+      padding: 0.86rem 0 0.78rem 0;
+      a {
+        width: 0.78rem;
+        height: 0.78rem;
+      }
+    }
+  }
+}

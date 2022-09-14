@@ -1,0 +1,28 @@
+.root {
+    background-color: "#F6F8FB";
+    display: flex;
+    min-height: 100vh;
+    min-width: 750px;
+    max-width: 1440px;
+    margin:0 auto;
+
+    transform-origin: top center;
+    position: absolute;
+    width: 1440px;
+    top:0;
+    left: 50%;
+
+
+  }
+  .main {
+    flex: 1;
+  }
+  .footer{
+    width: 100%;
+  }
+
+  @media screen and (max-width: 750px) {
+    .root{
+        flex-direction: column;
+    }
+  }

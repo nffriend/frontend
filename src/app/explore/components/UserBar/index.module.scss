@@ -1,0 +1,29 @@
+.root{
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding:0 .24rem;
+    margin-bottom: .2rem;
+    .head{
+        flex:none;
+        width: .48rem;
+        height: .48rem;
+        border-radius: .48rem;
+    }
+    .name{
+        flex:auto;
+        font-size: .18rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: 600;
+        color: #333333;
+        margin-left: .08rem;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+
+}

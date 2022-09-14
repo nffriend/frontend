@@ -1,0 +1,27 @@
+.root{
+    grid-area: foot;
+
+    background: linear-gradient(275deg,#cc9bfb 3%, #6474f9 100%);
+    border-radius: .08rem;
+    font-size: .14rem;
+    font-family: PingFangSC, PingFangSC-Regular, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    justify-content: space-between;
+    padding:0 .32rem;
+    &>div{
+        &>span{
+            &:first-child{
+                margin-right: .1rem;
+            }
+            &:nth-child(2){
+                font-weight: 500;
+            }
+        }
+    }
+
+}

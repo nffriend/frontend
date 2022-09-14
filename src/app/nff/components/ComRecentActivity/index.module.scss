@@ -1,0 +1,34 @@
+.root{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title{
+    box-sizing: border-box;
+    padding: .24rem .28rem;
+    font-size: .24rem;
+    font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    flex: none;
+}
+.list{
+    flex: auto;
+    height: 100px;
+    box-sizing: border-box;
+
+    .swiper{
+        height: 100%;
+    }
+    .slide{
+        height: auto;
+    }
+    
+}

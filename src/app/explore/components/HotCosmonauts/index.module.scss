@@ -1,0 +1,26 @@
+.root{
+    position: relative;
+    background-color: #fff;
+    border-radius: .2rem;
+    grid-area: com1;
+    display: flex;
+    flex-direction: column;
+}
+.list{
+    flex:auto;
+    height: 100px;
+}
+.swiper{
+    height: 100%;
+}
+.slide{
+    height: auto;
+}
+.titlehot{
+    display: flex;
+    align-items: center;
+    img{
+        height: 24px;
+        margin-left: 8px;
+    }
+}

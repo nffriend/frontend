@@ -1,0 +1,154 @@
+.root{
+    position: relative;
+    width: 8.8rem;
+    background: #f6f8fb;
+    border-radius: .16rem;
+    margin: 0 auto;
+    min-height: 6.8rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    .control{
+        height: .88rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        padding: 0 .32rem;
+        .close{
+            font-size: .26rem;
+            color: #333;
+            flex:none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            flex: auto;
+        }
+        .submit{
+            flex:none;
+            width: .94rem;
+            height: .34rem;
+            border-radius: .34rem;
+        }
+    }
+    .body{
+        position: relative;
+        padding: 0 .32rem .32rem;
+        box-sizing: border-box;
+        .prevView{
+            height: 3.92rem;
+            background: #f1f3f7;
+            border: .02rem solid #e5ebfa;
+            border-radius: .2rem;
+            overflow: hidden;
+            &.sizeSmall{
+                width: 3.92rem;
+            }
+            &.sizeMidum{
+                width: 66.66%;
+            }
+            &.sizeLarge{
+                width: 100%;
+            }
+        }
+        .formLayout{
+            margin-top: .3rem;
+            .label{
+                font-size: .18rem;
+                font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+                color: #333333;
+                margin-bottom: .1rem;
+                font-weight: 500;
+                sup{
+                    color: red;
+                }
+            }
+            .input{
+                display: block;
+                height: .48rem;
+                border: solid .01rem #dbe1f0;
+                border-radius: .08rem;
+                font-size: .16rem;
+                outline: none;
+                color: #222;
+                padding: .12rem;
+                width: 100%;
+                box-sizing: border-box;
+                &::placeholder{
+                    color:#B2B5BA;
+                }
+            }
+            .editBox{
+                .editer{
+                    height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 96%;
+        min-height: 0;
+        .control{
+            height: .5rem;
+            gap: .1rem;
+            padding: 0 .16rem;
+            .close{
+                font-size: .16rem;
+            }
+            .title{
+                font-size: .16rem;
+                font-weight: 500;
+            }
+            .submit{
+                flex:none;
+                width: .54rem;
+                height: .24rem;
+                border-radius: .14rem;
+                font-size: .12rem;
+            }
+        }
+        .body{
+            position: relative;
+            padding: 0 .16rem .16rem;
+            box-sizing: border-box;
+            .prevView{
+                height: 2.4rem;
+                background: #f1f3f7;
+                border: .02rem solid #e5ebfa;
+                border-radius: .2rem;
+                &.sizeSmall{
+                    width: 100%;
+                }
+                &.sizeMidum{
+                    width: 100%;
+                }
+                &.sizeLarge{
+                    width: 100%;
+                }
+            }
+            .formLayout{
+                margin-top: .15rem;
+                .label{
+                    font-size: .14rem;
+                    margin-bottom: .1rem;
+                }
+                .input{
+                    height: .4rem;
+                    font-size: .14rem;
+                }
+                .editBox{
+                    .editer{
+                        height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

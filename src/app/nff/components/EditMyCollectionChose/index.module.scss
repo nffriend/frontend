@@ -1,0 +1,82 @@
+.root{
+    position: relative;
+    width: 8.52rem;
+    background-color: #fff;
+    border-radius: .16rem;
+    margin: 0 auto;
+    min-height: 7.1rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    .control{
+        height: .88rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        padding: 0 .32rem;
+        .close{
+            font-size: .26rem;
+            color: #333;
+            flex:none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            flex: auto;
+        }
+        .submit{
+            flex:none;
+            width: .94rem;
+            height: .34rem;
+            border-radius: .34rem;
+        }
+    }
+    .list{
+        padding: 0 .32rem .32rem .32rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap:.2rem;
+        .cardEdit{
+            position: relative;
+        }
+    }
+}
+
+.noData{
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 96%;
+        min-height: 0;
+        padding-bottom: .2rem;
+        .control{
+            height: .5rem;
+            gap: .1rem;
+            padding: 0 .16rem;
+            .close{
+                font-size: .16rem;
+            }
+            .title{
+                font-size: .16rem;
+                font-weight: 500;
+            }
+            .submit{
+                flex:none;
+                width: .54rem;
+                height: .24rem;
+                border-radius: .14rem;
+                font-size: .12rem;
+            }
+        }
+        .list{
+            padding: 0 .16rem .16rem .16rem;
+            gap:.1rem;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.root{
+    position: relative;
+    min-height: 100%;
+    background-color: #F6F8FB;
+    padding: .32rem .16rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    "search"
+    "banner"
+    "applist"
+    "recommend"
+    "kit";
+    grid-template-columns: 1fr;
+    grid-template-rows: .48rem 2.4rem 2rem 4.46rem 5.88rem;
+    grid-gap: .16rem;
+}

@@ -1,0 +1,25 @@
+.root{
+    position: absolute;
+    top:-5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 4px;
+    box-shadow: 0 0 0 500vh rgb(0,0,0,.7);
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms;
+    .body{
+        position: absolute;
+        top: calc(100% + 10px);
+        background:#fff;
+        padding: 10px;
+        left: 10px;
+        border-radius: 8px;
+    }
+    &.show{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

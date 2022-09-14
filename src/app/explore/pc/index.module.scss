@@ -1,0 +1,36 @@
+.root{
+    position: relative;
+    min-height: 100%;
+    background-color: #F6F8FB;
+    padding: .32rem .16rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    "search search"
+    "title title"
+    "com1 com2"
+    "img1 img2"
+    "foot foot";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .48rem 3.86rem 7.8rem 3.35rem .64rem;
+    grid-row-gap: .2rem;
+    grid-column-gap: .16rem;
+}
+
+.title{
+    box-sizing: border-box;
+    padding: .24rem .28rem;
+
+    flex: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &>span{
+        &:first-child{
+            font-size: .24rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: bold;
+            color: #333333;
+        }
+    }
+}

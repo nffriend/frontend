@@ -1,0 +1,92 @@
+.header {
+    position: sticky;
+    top: 0;
+    height: 0.7rem;
+    min-height: 30px;
+    width: 100%;
+    z-index: 99;
+    box-sizing: border-box;
+    background-color: rgb(19, 25, 27, .57);
+    box-shadow: 0px 2px 30px -9px rgba(0, 0, 0, 0.69);
+    backdrop-filter: blur(8px);
+    .headerBox{
+      position: relative;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0 .5rem;
+      .logo {
+        flex:none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        img{
+          height: .32rem;
+        }
+      }
+      .menuUl {
+        position: relative;
+
+        height: 100%;
+        display: flex;
+        font-size: 0.2rem;
+        justify-content: center;
+        li {
+          width: 2.3rem;
+          text-align: center;
+          line-height: 0.7rem;
+  
+          &.btnli {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .btn {
+              border-radius: 0.08rem;
+              height: 0.4rem;
+              width: 2.2rem;
+
+              transition: color 200ms;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(90deg, #DEFFCE 0%, #0F7D6E  100%);
+              font-size: .16rem;
+              font-weight: 500;
+              color: #13191B;
+
+            }
+            span {
+              margin-left: 0.05rem;
+            }
+          }
+    
+          &.userLi{
+            position: relative;
+            color: #90A5AC;
+      
+            cursor: pointer;
+            transition: color 200ms;
+            &>div:first-child{
+              position: relative;
+              z-index: 3;
+            }
+            &:hover{
+              color: #fff;
+            }
+            .photo{
+              width: .32rem;
+              height:.32rem;
+              border-radius: .32rem;
+              margin-right: .06rem;
+            }
+    
+          }
+        }
+      }
+    }
+  }
+  

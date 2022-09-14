@@ -1,0 +1,383 @@
+.root{
+    flex: none;
+    background-color: #fff;
+    font-family: Limelight, Limelight-Regular,sans-serif;
+    box-sizing: border-box;
+    width: 2rem;
+    position: relative;
+    transition: width 200ms;
+    &.collapsed{
+        width: 1rem;
+        .menuList{
+            li{
+                padding:0;
+                &>span:first-child{
+                    margin:0 auto;
+                }
+                img{
+                    margin:0 auto;
+                    pointer-events: auto;
+                }
+            }
+            .label{display: none;}
+        }
+        .ad{
+            display: none;
+        }
+
+        .sideBtn{
+            i{
+                transform: translate(-50%, -50%) scale(.7) rotate(0deg);
+            }
+        }
+        .sticky{
+            .logo{
+                .logoImg{
+                    transform: scale(.6, .6)
+                }
+                
+            }
+        }
+
+    }
+
+    .menuIcon{
+        width: .22rem;
+        height: .22rem;
+    }
+    .menuList{
+        box-sizing: border-box;
+        padding: 0 .12rem;
+        min-height: 1.5rem;
+        &>li{
+            height: .44rem;
+            display: flex;
+            align-items: center;
+            border-radius: .1rem;
+            box-sizing: border-box;
+            padding-left: .16rem;
+            cursor: pointer;
+            &:hover{
+                background-color: #f4f4f4;
+            }
+            .icon{
+                width: .22rem;
+                pointer-events: none;
+            }
+            .label{
+                font-size: .18rem;
+                font-family: HindMadurai, HindMadurai-SemiBold,sans-serif;
+                font-weight: 500;
+                color: #333;
+                margin-left: .06rem;
+                white-space:nowrap;
+                overflow: hidden;
+                
+            }
+            &.chosed{
+                background: #000;
+                img{
+                    filter: invert(100%);
+                }
+                span{
+                    color: #fff;
+                }
+            }
+            &.noHigh{
+                background: #fff;
+                img{
+                    filter: none;
+                }
+                span{
+                    color: #333;
+                }
+            }
+            &.disabled{
+                pointer-events: none;
+                opacity: .5;
+            }
+            &+li{
+                margin-top: .15rem;
+            }
+        }
+    }
+    .sticky{
+        position: sticky;
+        opacity:0;
+        transition: opacity 200ms;
+        top:0;
+        z-index: 99;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        &.show{
+            opacity: 1;
+        }
+        .logo{
+           min-height: .9rem;
+            cursor: pointer;
+            position: relative;
+            flex:none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logoImg{
+                height: .38rem;
+                margin-left: -.15rem;
+                transition: transform 200ms;
+            }
+        }
+        .s{
+            position: sticky;
+            top:0;
+        }
+        .ad{
+            position: relative;
+            box-sizing: border-box;
+            margin-top: .5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .16rem;
+            flex:none;
+
+            .adPic{
+                width: 1.8rem;
+                height: auto;
+                display: block;
+                cursor: pointer;
+            }
+        }
+        .auto{
+            flex: auto;
+        }
+        .bottomBtnBox{
+            flex:none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .2rem;
+            padding: .2rem 0;
+        }
+    }
+
+   
+
+    // connect型的按钮
+    .connect{
+        border-radius: .1rem;
+        width: calc(100% - .24rem);
+        height: .44rem;
+        .icon{
+            pointer-events: none;
+            width: .22rem;
+            height: auto;
+            margin-right: .06rem;
+        }
+        &.collapsed{
+            .icon{
+                pointer-events: auto;
+            }
+            .label{
+                display: none;
+            }
+        }
+    }
+
+    .connectC{
+        background: linear-gradient(90deg,#787df5, #fb9df9);
+        border: 0;
+    }
+
+    
+    // connect型的按钮 glost
+    .connectG{
+        border-radius: .1rem;
+        width: calc(100% - .24rem);
+        height: .44rem;
+        background-color: transparent;
+        border-color: transparent;
+        color: #333;
+        transition: background-color 200ms, color 200ms;
+        .icon{
+            pointer-events: none;
+            width: .22rem;
+            height: auto;
+            margin-right: .06rem;
+            filter: invert(100%);
+        }
+        &.collapsed{
+            .icon{
+                pointer-events: auto;
+            }
+            .label{
+                display: none;
+            }
+        }
+        &.chosed{
+            background-color: #000;
+            color: #fff;
+            .icon{
+                filter: none;
+            }
+        }
+
+    }
+
+    .connectBar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto 0 auto;
+        width: 1.76rem;
+        .photo{
+            width: .4rem;
+            height: .4rem;
+            margin-right: .07rem;
+            border-radius: .4rem;
+            flex:none;
+        }
+        span{
+            font-size: .18rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: 600;
+            color: #333333;
+            overflow: hidden;
+        }
+    }
+
+    .sideBtn{
+        position: absolute;
+        width: .11rem;
+        height: .65rem;
+        right: -.1rem;
+        top: .1rem;
+        cursor: pointer;
+        z-index: 99;
+        
+
+        &:hover{
+            .back{
+                border-left-color: #f7f7f7;
+            }
+        }
+        .back{
+            position: absolute;
+            top:0;
+            left:0;
+            width:0;
+            height: 100%;
+            border: solid .1rem transparent;
+            border-right: none;
+            border-left-color: #fff;
+            transition: border-left-color 200ms;
+        }
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.7) rotate(180deg);
+            font-size: .08rem;
+            color: #9499AA;
+            transition: transform 200ms;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+       width: 100%;
+       padding-bottom:0;
+       position: sticky;
+       top:0;
+       z-index: 99;
+       &.collapsed{
+        width: 100%;
+        .menuList{
+          
+            li{
+                padding-left: .3rem;
+                padding-right:.2rem;
+                &>span:first-child{
+                    margin:0 auto;
+                }
+                img{
+                    margin:0 auto;
+                    pointer-events: auto;
+                }
+            }
+            .label{display: block;}
+        }
+        .ad{
+            display: none;
+        }
+
+        .sideBtn{
+            i{
+                transform: translate(-50%, -50%) scale(.7) rotate(0deg);
+            }
+        }
+
+
+    }
+
+    .sticky{
+        position: relative;
+        display: flex;
+        padding: 0 .2rem;
+        box-sizing: border-box;
+        align-items: center;
+        min-height: auto;
+        flex-direction: row;
+        .logo{
+            margin-right: .2rem;
+           .logoImg{
+            margin-left: 0;
+           }
+        }
+        .ad{
+            display: none;
+        }
+       }
+       .menuList{
+            display: flex;
+            gap: .1rem;
+            align-items: center;
+            &>li{
+                padding-right:.2rem; 
+                &+li{
+                    margin-top: 0;
+                    
+                }
+            }
+        }
+        .sideBtn{
+            display: none !important;
+        }
+        .connectBar{
+            margin:0;
+        }
+        .connectG{
+            border-radius: .1rem;
+            width: auto;
+            height: .44rem;
+            position: relative;
+            bottom:0;
+            left: 0;
+            transform: translateX(0);
+            margin-top: 0;
+            padding: 0 .1rem;
+        }
+        .connect{
+            border-radius: .1rem;
+            width: auto;
+            height: .44rem;
+            position: relative;
+            bottom:0;
+            left: 0;
+            transform: translateX(0);
+            margin-top: 0;
+            padding: 0 .1rem;
+        }
+    }
+}

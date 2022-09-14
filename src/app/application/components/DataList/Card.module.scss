@@ -1,0 +1,60 @@
+.root{
+    width: 2.72rem;
+    height: 1.53rem;
+    position: relative;
+    border-radius: .13rem;
+    border: 1px solid #e5ebfa;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    overflow: hidden;
+    padding: .12rem;
+    box-sizing: border-box;
+    gap: .05rem;
+    .head{
+        position: absolute;
+        width: .64rem;
+        height: .64rem;
+        border-radius: .64rem;
+        object-fit: cover;
+        top: 50%;
+        right: .12rem;
+        transform: translateY(-50%);
+    }
+    .title{
+        font-size: .2rem;
+        font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+        font-weight: 600;
+        color: #333333;
+    }
+    .stars{
+        font-size: .12rem;
+        color: #333333;
+        display: flex;
+        align-items: center;
+        .starNo{
+            margin-left: .08rem;
+        }
+    }
+    .txtBar{
+        span{
+            font-size: .14rem;
+            color: #333333;
+            
+            &:first-child{
+                display: inline-block;
+                width: .57rem;
+                font-weight: 400;
+              
+            }
+            &:nth-child(2){
+                font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+                font-weight: 600;
+
+            }
+        }
+    }
+    &.isRow2{
+        margin-top: .24rem;
+    }
+}

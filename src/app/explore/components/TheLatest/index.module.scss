@@ -1,0 +1,18 @@
+.root{
+    position: relative;
+    background-color: #fff;
+    border-radius: .2rem;
+    grid-area: com2;
+    display: flex;
+    flex-direction: column;
+}
+.list{
+    flex:auto;
+    height: 100px;
+}
+.swiper{
+    height: 100%;
+}
+.slide{
+    height: auto;
+}

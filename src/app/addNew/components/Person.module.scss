@@ -1,0 +1,56 @@
+.root{
+    position: relative;
+    padding: 0 .4rem;
+    .box{
+        &.mb{
+            margin-bottom: .3rem;
+            padding-bottom: .3rem;
+            border-bottom: 1px solid rgba(229,235,250,0.70);
+        }
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+
+
+            margin-bottom: .32rem;
+            img{
+                height: .28rem;
+                margin-left: .1rem;
+            }
+
+            .typeBtn{
+                cursor: pointer;
+            }
+        }
+        .infos{
+            width: 100%;
+            overflow: auto;
+            display: flex;
+            gap: .54rem;
+            flex-wrap: wrap;
+            .hotItem{
+                text-align: center;
+                font-size: .16rem;
+                font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+                font-weight: normal;
+                color: #333333;
+                cursor: pointer;
+                img{
+                    width: .65rem;
+                    height: .65rem;
+                    margin-bottom: .1rem;
+                }
+            }
+        }
+
+        .infos2{
+            display: flex;
+            flex-wrap: wrap;
+            gap: .24rem;
+        }
+    }
+}

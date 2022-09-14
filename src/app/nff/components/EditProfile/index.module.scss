@@ -1,0 +1,203 @@
+.root{
+    position: relative;
+    width: 8rem;
+    background-color: #fff;
+    border-radius: .16rem;
+    margin: 0 auto;
+    min-height: 6.8rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    .control{
+        height: .88rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        padding: 0 .32rem;
+        .close{
+            font-size: .26rem;
+            color: #333;
+            flex:none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            flex: auto;
+        }
+        .submit{
+            flex:none;
+            width: .94rem;
+            height: .34rem;
+            border-radius: .34rem;
+        }
+    }
+    .cover{
+        position: relative;
+        .back{
+            width: 100%;
+            height: 2.18rem;
+            background-color: #888;
+            .backImg{
+                object-fit: cover;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+            
+        }
+        .operation{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: .56rem;
+        }
+        &:hover{
+            .editBtn{
+                opacity: 1;
+            }
+        }
+    }
+    .editBtn{
+        width: .64rem;
+        height: .64rem;
+        background: rgba(255,255,255,0.31);
+        border-radius: 50%;
+        backdrop-filter: blur(3px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .24rem;
+        color: #fff;
+        cursor: pointer;
+        opacity: .5;
+        transition: opacity 200ms;
+    }
+    .headPhoto{
+        position: relative;
+        width: 1.4rem;
+        height: 1.4rem;
+        // transform: translate(.24rem, -.5rem);
+        margin: -.5rem .24rem;
+        background-color: #ccc;
+        border-radius: 1.4rem;
+        &:hover{
+            .editBtn{
+                opacity: 1;
+            }
+        }
+        .photoBox{
+            display: block;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 1.4rem;
+            border:solid .04rem #fff;
+            object-fit: cover;
+
+            
+
+        }
+        .editBtn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: .64rem;
+            height: .64rem;
+            background: rgba(255,255,255,0.31);
+            border-radius: 50%;
+            backdrop-filter: blur(3px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .24rem;
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+        }
+    }
+    .wordsBox{
+        margin-top: .5rem;
+        padding: .18rem .24rem;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 100%;
+        border-radius: .1rem;
+        min-height: 3.8rem;
+        .control{
+            height: .44rem;
+            gap: .1rem;
+            padding: 0 .16rem;
+            .close{
+                font-size: .13rem;
+            }
+            .title{
+                font-size: .16rem;
+            }
+            .submit{
+                width: .64rem;
+                height: .24rem;
+                border-radius: .12rem;
+            }
+        }
+        .cover{
+            .back{
+                width: 100%;
+                height: 1.09rem;    
+            }
+            .operation{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                gap: .32rem;
+            }
+            &:hover{
+                .editBtn{
+                    opacity: 1;
+                }
+            }
+        }
+        .editBtn{
+            width: .36rem;
+            height: .36rem;
+            font-size: .14rem;
+        }
+        .headPhoto{
+            position: relative;
+            width: .8rem;
+            height: .8rem;
+            margin: -.4rem .24rem;
+
+            .photoBox{
+                width: .8rem;
+                height: .8rem;
+            }
+            .editBtn{
+                width: .36rem;
+                height: .36rem;
+                font-size: .14rem;
+            }
+        }
+        .wordsBox{
+            margin-top: .4rem;
+            padding: .1rem .12rem;
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+        }
+    }
+}

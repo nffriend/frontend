@@ -1,0 +1,19 @@
+.root{
+    box-sizing: border-box;
+    padding: 0 .16rem .24rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.replayBtn{
+    width: .9rem;
+    height: .34rem;
+    align-self: flex-end;
+    margin-top: .2rem;
+    font-size: .16rem;
+    &.disabled{
+        background: #c0c3c9;
+        pointer-events: none;
+        border-color: #c0c3c9;
+    }
+}

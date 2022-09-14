@@ -1,0 +1,101 @@
+.root{
+    position: relative;
+    width: 4.2rem;
+    border-radius: .16rem;
+    margin: 0 auto;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+    padding-top: .3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .back{
+        width: 100%;
+        display: block;
+    }
+    .infoBox{
+        position: absolute;
+        width: 100%;
+        top:0;
+        left:0;
+        padding-top: 1rem;
+        .centerIcon{
+            width: 2.04rem;
+            position: absolute;
+            top: -.65rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &>i{
+            position: absolute;
+            padding: .05rem .15rem;
+            top: .5rem;
+            left: .3rem;
+            font-size: .24rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .title{
+            font-size:.24rem;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: #333333;
+            line-height: .34rem;
+            margin-top: .1rem;
+        }
+        .info{
+            font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+            font-weight: 500;
+            font-size: .16rem;
+            text-align: center;
+            color: #333;
+            line-height: .22rem;
+            margin-top: .1rem;
+        }
+        .btn{
+            width: 2.66rem;
+            height: .4rem;
+            margin:.2rem auto 0 auto;
+        }
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 96%;
+        min-height: 0;
+        .infoBox{
+            padding-top: .7rem;
+            .centerIcon{
+                width: 1.04rem;
+                top: -.2rem;
+            }
+            &>i{
+                position: absolute;
+                padding: .02rem .07rem;
+                top: .5rem;
+                left: .3rem;
+                font-size: .24rem;
+            }
+            .title{
+                font-size:.2rem;
+                line-height: .24rem;
+            }
+            .info{
+
+                font-size: .12rem;
+                line-height: .2rem;
+                margin-top: .1rem;
+            }
+            .btn{
+                width: 2.66rem;
+                height: .4rem;
+                margin:.2rem auto 0 auto;
+            }
+        }
+    
+    }
+}

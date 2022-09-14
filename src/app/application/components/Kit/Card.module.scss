@@ -1,0 +1,50 @@
+.root{
+    width: 2.72rem;
+    height: 2.24rem;
+    position: relative;
+    border-radius: .13rem;
+    border: 1px solid #e5ebfa;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    overflow: hidden;
+    .pic{
+        width: 100%;
+        object-fit: cover;
+        flex: auto;
+    }
+    .info{
+        height: .7rem;
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        gap: .06rem;
+        font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+        font-weight: 500;
+        box-sizing: border-box;
+        padding: 0 .12rem;
+        justify-content: center;
+        &>div{
+            overflow: hidden;
+        }
+        .title{
+            font-size: .16rem;
+            color: #333333;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: 600;
+        }
+        .nums{
+            font-size: .14rem;
+            color: #7a7e8d;
+            
+            color: #333333;
+            span{
+                margin-right:.2rem;
+            }
+        }
+
+    }
+    &.isRow2{
+        margin-top: .24rem;
+    }
+}

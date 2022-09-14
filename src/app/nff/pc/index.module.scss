@@ -1,0 +1,32 @@
+
+.root{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    .content{
+        position: relative;
+        flex: auto;
+    }
+}
+
+.noData{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    .title{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .connect{
+        padding: .04rem .2rem;
+        height: .5rem;
+       
+        font-size: .24rem;
+        margin-top: .1rem;
+    }
+}

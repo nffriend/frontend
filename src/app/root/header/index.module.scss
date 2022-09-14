@@ -1,0 +1,289 @@
+.header {
+  position: sticky;
+  top: 0.9rem;
+  height: 0.64rem;
+  min-height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  transition: top 200ms, background-color 200ms;
+  background-color: transparent;
+  &.pickup {
+    top: 0;
+    background-color: #1a2225;
+  }
+  .mobileBtn {
+    display: none;
+  }
+  .mobileLogo {
+    display: none;
+  }
+  .menuUl {
+    position: relative;
+    background-color: #1a2225;
+    height: 100%;
+    display: flex;
+    font-size: 0.2rem;
+    justify-content: center;
+    &::before,
+    &::after {
+      content: "";
+      width: 0.64rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: #1a2225;
+      pointer-events: none;
+      z-index: -1;
+    }
+    &::before {
+      left: -0.32rem;
+      transform: skew(-30deg);
+    }
+    &::after {
+      right: -0.32rem;
+      transform: skew(30deg);
+    }
+    li {
+      width: 2.3rem;
+      text-align: center;
+      line-height: 0.64rem;
+      & > div:first-child {
+        position: relative;
+        z-index: 2;
+        &:hover {
+          .comingsoon {
+            opacity: 1;
+          }
+        }
+        .comingsoon {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1.42rem;
+          min-height: 0.58rem;
+          padding: 0.04rem;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 200ms;
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          & > div {
+            transform: translateY(0.07rem);
+            position: relative;
+            z-index: 1;
+            font-size: 0.16rem;
+            font-weight: bold;
+            color: #28e2b2;
+            line-height: normal;
+            display: inline-block;
+          }
+        }
+      }
+      a {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        transition: color 200ms;
+        z-index: 2;
+        &:hover {
+          color: #28e2b2;
+        }
+      }
+      &.logo {
+        position: relative;
+        width: 2.6rem;
+        line-height: normal;
+        .logoback {
+          position: absolute;
+          width: 100%;
+          top: -0.08rem;
+          left: 0;
+        }
+        a {
+          font-size: 0.32rem;
+          pointer-events: none;
+        }
+      }
+      &.btnli {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .btn {
+          border-radius: 0.08rem;
+          border: 1px solid #01908e;
+          height: 0.38rem;
+
+          text-align: center;
+          width: auto;
+          padding: 0 0.12rem;
+          font-weight: bold;
+          line-height: normal;
+          transition: color 200ms;
+          display: flex;
+          align-items: center;
+          & > div {
+            color: #01908e;
+            background: linear-gradient(180deg, #b5ffdd 0%, #01908e 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          &:hover {
+            color: #03dad6;
+          }
+        }
+        span {
+          margin-left: 0.05rem;
+        }
+      }
+
+      &.userLi{
+        position: relative;
+        color: #90A5AC;
+        font-family: PingFangSC-Medium, PingFang SC, sans-serif;
+        cursor: pointer;
+        transition: color 200ms;
+        &:hover{
+          color: #fff;
+        }
+        .photo{
+          width: .32rem;
+          height:.32rem;
+          border-radius: .32rem;
+          margin-right: .06rem;
+        }
+
+      }
+    }
+  }
+  .mobileControl{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    .menuUl {
+      li {
+        width: 1.8rem;
+        &.logo {
+          width: 2.2rem;
+          a {
+            font-size: 0.24rem;
+          }
+        }
+        &.btnli {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    position: sticky;
+    top: 0;
+    height: 1.12rem;
+    background-color: #1a2225;
+    .menuUl {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms;
+      &.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      font-size: 0.3rem;
+      padding-top: 2rem;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      &::before,
+      &::after {
+        display: none;
+      }
+      li {
+        width: 100%;
+        line-height: 1rem;
+
+        &.logo {
+          display: none;
+        }
+        &.btnli {
+          display: none;
+
+        }
+        &.userLi{
+          display: none;
+        }
+      }
+    }
+    .mobileControl{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 .4rem;
+      .mobileBtn {
+        width: 0.48rem;
+        height: 0.48rem;
+        display: block;
+        transform: rotate(180deg);
+        transition: transform 200ms;
+        
+        &.open{
+          transform: rotate(270deg);
+        }
+      }
+      .userLi{
+        height: 100%;
+        .userHeader{
+          height: 100%;
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-size: .3rem;
+          font-weight: 500;
+          color: #90A5AC;
+          font-family: PingFangSC-Medium, PingFang SC, sans-serif;
+    
+          .photo{
+            width: .48rem;
+            margin-left: .12rem;
+          }
+        }
+      }
+      .btnLi{
+        font-size: .4rem;
+        font-weight: 400;
+        color: #F6AC06;
+    
+        background: linear-gradient(180deg, #B5FFDD 0%, #01908E 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

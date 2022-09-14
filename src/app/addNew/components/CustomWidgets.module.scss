@@ -1,0 +1,170 @@
+.root{
+    position: relative;
+
+    min-height: 5rem;
+    box-sizing: border-box;
+    pointer-events: auto;
+
+    .prevView{
+        height: 3.92rem;
+        width: 3.92rem;
+        background: #f1f3f7;
+        border: 1px solid #e5ebfa;
+        border-radius: .18rem;
+        &.medium{
+            width: 50%;
+        }
+        &.large{
+            width: 100%;
+        }
+    }
+
+    .label{
+        margin-top: .32rem;
+        position: relative;
+        .title{
+            font-size: 16px;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: normal;
+            text-align: left;
+            color: #121212;
+            margin-bottom: .12rem;
+        }
+
+        .size{
+            width: 100%;
+           &>div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+           }
+        }
+
+        .formCom{
+            width: 60%;
+        }
+
+        .editBox{
+            border: solid 1px #ccc;
+            .editer{
+                height: 3rem;
+            }
+        }
+    }
+
+
+    .control{
+        height: .88rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+
+        .title{
+            font-size: .26rem;
+            font-family: HindMadurai, HindMadurai-Bold, sans-serif;
+            font-weight: 700;
+            color: #333333;
+            flex: auto;
+        }
+        .submit{
+            flex:none;
+            width: 2.24rem;
+            height: .48rem;
+            border-radius: .1rem;
+            &.disabled{
+                cursor: no-drop;
+                background-color: #444;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        width: 100%;
+        min-height: 0;
+        :global(.ant-tabs-nav){
+            :global(.ant-tabs-tab){
+                padding: .1rem 0;
+                min-width: .45rem;
+                :global(.ant-tabs-tab-btn){
+                    font-size: .12rem;
+                }
+            }
+        }
+
+        .control{
+            height: .5rem;
+            gap: .1rem;
+            padding: 0 .16rem;
+            .close{
+                font-size: .16rem;
+            }
+            .title{
+                font-size: .16rem;
+                font-weight: 500;
+            }
+            .submit{
+                flex:none;
+                width: .54rem;
+                height: .24rem;
+                border-radius: .14rem;
+                font-size: .12rem;
+            }
+        }
+    
+        .tabBody{
+            box-sizing: border-box;
+            padding: .1rem .14rem;
+        }
+    
+        .footer{
+            padding: .2rem 0;
+            font-size: .14rem;
+        }
+    
+        .comList{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .16rem;
+        }
+        .comBox{
+            position: relative;
+            height: 2rem;
+            overflow: hidden;
+            border-radius: .2rem;
+            cursor: pointer;
+    
+            &.col1{
+                width: 100%;
+            }
+        }
+    
+        .formLayout{
+            &+.formLayout{
+                margin-top: .15rem;
+            }
+            .label{
+                font-size: .12rem;
+                margin-bottom: .1rem;
+            }
+            .input{
+                height: .4rem;
+                font-size: .14rem;
+            }
+        }
+    
+        .area{
+            grid-template-columns: 35% auto;
+            grid-template-rows: 1.2rem 1.2rem;
+            grid-gap: .12rem;
+            &>div{
+                font-size: .16rem;
+                border-radius: .14rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.root{
+    width: 3.7rem;
+    height:1.3rem;
+    background-size: cover;
+
+    border-radius: .2rem;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 200ms;
+    &:hover{
+        box-shadow: 0 0 8px #ccc;
+    }
+    .info{
+        display: flex;
+        height: .6rem;
+        background-color: #fff;
+        border: solid 1px #E5EBFA;
+        border-top-color: transparent;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        box-sizing: border-box;
+        padding: 0 .06rem 0 .08rem;
+        gap: .04rem;
+        .head{
+            width: .34rem;
+            height: .34rem;
+            border-radius: .34rem;
+            flex:none;
+        }
+        .name{
+            font-size: .15rem;
+            font-family: HindMadurai, HindMadurai-Medium, sans-serif;
+            font-weight: 500;
+            color: #333333;
+            flex: auto;
+            overflow: hidden;
+        }
+        .rank{
+            font-size: 15px;
+            font-family: HindMadurai, HindMadurai-SemiBold, sans-serif;
+            font-weight: bold;
+            color: #333333;
+            flex: none;
+        }
+    }
+    &.isRow2{
+        margin-top: .24rem;
+    }
+}
